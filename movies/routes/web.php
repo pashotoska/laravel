@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/films');
+});
+
+Route::get("/films",function(){
+    return "Films";
 });
