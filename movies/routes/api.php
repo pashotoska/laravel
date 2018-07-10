@@ -34,7 +34,6 @@ Route::get("/films",function(Request $request){
         $movies[$key]["country"] = $m->country;
         $movies[$key]["currency"] = $m->currency;
         $movies[$key]["comments"] = $m->comments;
-        $movies[$key]["link"] =$slug->createSlug($m->name,$m->id,"movie");
         foreach($movies[$key]["comments"] as $k => $c){
             $movies[$key]["comments"][$k]["user"] = $c->user;
         }

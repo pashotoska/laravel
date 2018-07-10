@@ -88,6 +88,8 @@ var Movies = function(){
         movieInstance.movieTitle.html(movieInstance.currentMovie.name);
         movieInstance.movieDescription.html(movieInstance.currentMovie.description);
         movieInstance.movieCountries.html(movieInstance.currentMovie.country.name);
+        movieInstance.moviePhotoLink.attr("href","films/"+movieInstance.currentMovie.slug);
+        movieInstance.movieTitleLink.attr("href","films/"+movieInstance.currentMovie.slug);
         var genres = movieInstance.currentMovie.movie_genres;
         var g ="";
         for(var i = 0; i <genres.length; i++){
