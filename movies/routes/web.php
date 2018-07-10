@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    return redirect('/films');
+    return view('welcome');
 });
 
 Route::get("/films",function(){
-    return "Films";
+    return view("movies.index");
 });
